@@ -1,0 +1,46 @@
+{
+  "name": "@r007/plugin-cognito",
+  "version": "1.0.0",
+  "description": "Architect serverless framework plugin that defines cognito pools for your application",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r007/plugin-cognito"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://arc.codes",
+  "files": [
+    "src/*"
+  ],
+  "dependencies": {
+    "@architect/utils": "~3.0.4"
+  },
+  "devDependencies": {
+    "@architect/eslint-config": "~2.0.1",
+    "eslint": "^8.9.0"
+  },
+  "keywords": [
+    "amazon",
+    "api gateway",
+    "arc",
+    "architect",
+    "aws",
+    "ci",
+    "cloud functions",
+    "cloud",
+    "deployment",
+    "lambda",
+    "plugin",
+    "node_modules",
+    "npm",
+    "plugin",
+    "serverless"
+  ],
+  "eslintConfig": {
+    "extends": "@architect/eslint-config"
+  }
+}
