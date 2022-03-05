@@ -1,27 +1,33 @@
 {
-  "name": "@r007/plugin-cognito",
+  "name": "@r007/arc-plugin-cognito",
   "version": "1.0.0",
   "description": "Architect serverless framework plugin that defines cognito pools for your application",
-  "main": "src/index.js",
+  "main": "lib/main.js",
   "scripts": {
-    "lint": "eslint . --fix",
-    "test": "npm run lint"
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "all": "npm run build && npm run format && npm run lint && npm run package"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/r007/plugin-cognito"
+    "url": "https://github.com/r007/arc-plugin-cognito"
   },
   "license": "Apache-2.0",
   "homepage": "https://arc.codes",
-  "files": [
-    "src/*"
-  ],
   "dependencies": {
-    "@architect/utils": "~3.0.4"
+    "@architect/utils": "~3.1.0"
   },
   "devDependencies": {
     "@architect/eslint-config": "~2.0.1",
-    "eslint": "^8.9.0"
+    "@typescript-eslint/parser": "^5.13.0",
+    "@vercel/ncc": "^0.33.3",
+    "eslint": "^8.10.0",
+    "eslint-plugin-github": "^4.3.5",
+    "prettier": "^2.5.1",
+    "typescript": "^4.6.2"
   },
   "keywords": [
     "amazon",
